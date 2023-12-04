@@ -28,257 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grpRegistro = new GroupBox();
-            lblPlan = new Label();
-            lblInterno = new Label();
-            lblApellido = new Label();
-            lblDni = new Label();
-            lblEntidad = new Label();
-            lblCredencial = new Label();
-            lblNombre = new Label();
-            txtDni = new TextBox();
-            txtPlan = new TextBox();
-            txtInterno = new TextBox();
-            txtApellido = new TextBox();
-            txtEntidad = new TextBox();
-            txtCredencial = new TextBox();
-            txtNombre = new TextBox();
-            btnRegistrar = new Button();
-            btnCancelar = new Button();
-            grpRegistro.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrar));
+            btnVolver = new PictureBox();
+            btnAfiliado = new PictureBox();
+            btnEmpresa = new PictureBox();
+            lblConfiguracion = new Label();
+            label1 = new Label();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)btnVolver).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAfiliado).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnEmpresa).BeginInit();
             SuspendLayout();
             // 
-            // grpRegistro
+            // btnVolver
             // 
-            grpRegistro.Controls.Add(lblPlan);
-            grpRegistro.Controls.Add(lblInterno);
-            grpRegistro.Controls.Add(lblApellido);
-            grpRegistro.Controls.Add(lblDni);
-            grpRegistro.Controls.Add(lblEntidad);
-            grpRegistro.Controls.Add(lblCredencial);
-            grpRegistro.Controls.Add(lblNombre);
-            grpRegistro.Controls.Add(txtDni);
-            grpRegistro.Controls.Add(txtPlan);
-            grpRegistro.Controls.Add(txtInterno);
-            grpRegistro.Controls.Add(txtApellido);
-            grpRegistro.Controls.Add(txtEntidad);
-            grpRegistro.Controls.Add(txtCredencial);
-            grpRegistro.Controls.Add(txtNombre);
-            grpRegistro.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            grpRegistro.ForeColor = Color.FromArgb(13, 51, 70);
-            grpRegistro.Location = new Point(90, 54);
-            grpRegistro.Name = "grpRegistro";
-            grpRegistro.Size = new Size(702, 344);
-            grpRegistro.TabIndex = 0;
-            grpRegistro.TabStop = false;
-            grpRegistro.Text = "Registrar Afiliado";
+            btnVolver.Cursor = Cursors.Hand;
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.Location = new Point(12, 12);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(42, 40);
+            btnVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            btnVolver.TabIndex = 9;
+            btnVolver.TabStop = false;
+            btnVolver.Click += btnVolver_Click;
             // 
-            // lblPlan
+            // btnAfiliado
             // 
-            lblPlan.AutoSize = true;
-            lblPlan.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPlan.Location = new Point(379, 179);
-            lblPlan.Name = "lblPlan";
-            lblPlan.Size = new Size(36, 19);
-            lblPlan.TabIndex = 13;
-            lblPlan.Text = "Plan";
+            btnAfiliado.Cursor = Cursors.Hand;
+            btnAfiliado.Image = (Image)resources.GetObject("btnAfiliado.Image");
+            btnAfiliado.Location = new Point(205, 225);
+            btnAfiliado.Name = "btnAfiliado";
+            btnAfiliado.Size = new Size(136, 120);
+            btnAfiliado.SizeMode = PictureBoxSizeMode.Zoom;
+            btnAfiliado.TabIndex = 10;
+            btnAfiliado.TabStop = false;
+            btnAfiliado.Click += btnAfiliado_Click;
             // 
-            // lblInterno
+            // btnEmpresa
             // 
-            lblInterno.AutoSize = true;
-            lblInterno.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblInterno.Location = new Point(379, 112);
-            lblInterno.Name = "lblInterno";
-            lblInterno.Size = new Size(54, 19);
-            lblInterno.TabIndex = 12;
-            lblInterno.Text = "Interno";
+            btnEmpresa.Cursor = Cursors.Hand;
+            btnEmpresa.Image = (Image)resources.GetObject("btnEmpresa.Image");
+            btnEmpresa.Location = new Point(559, 225);
+            btnEmpresa.Name = "btnEmpresa";
+            btnEmpresa.Size = new Size(136, 123);
+            btnEmpresa.SizeMode = PictureBoxSizeMode.Zoom;
+            btnEmpresa.TabIndex = 11;
+            btnEmpresa.TabStop = false;
             // 
-            // lblApellido
+            // lblConfiguracion
             // 
-            lblApellido.AutoSize = true;
-            lblApellido.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblApellido.Location = new Point(379, 45);
-            lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(61, 19);
-            lblApellido.TabIndex = 11;
-            lblApellido.Text = "Apellido";
+            lblConfiguracion.AutoSize = true;
+            lblConfiguracion.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            lblConfiguracion.ForeColor = Color.FromArgb(13, 51, 70);
+            lblConfiguracion.Location = new Point(383, 60);
+            lblConfiguracion.Name = "lblConfiguracion";
+            lblConfiguracion.Size = new Size(126, 37);
+            lblConfiguracion.TabIndex = 12;
+            lblConfiguracion.Text = "Registrar";
             // 
-            // lblDni
+            // label1
             // 
-            lblDni.AutoSize = true;
-            lblDni.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblDni.Location = new Point(43, 246);
-            lblDni.Name = "lblDni";
-            lblDni.Size = new Size(31, 19);
-            lblDni.TabIndex = 10;
-            lblDni.Text = "Dni";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(21, 82, 113);
+            label1.Location = new Point(233, 186);
+            label1.Name = "label1";
+            label1.Size = new Size(79, 25);
+            label1.TabIndex = 13;
+            label1.Text = "Afiliado";
             // 
-            // lblEntidad
+            // label2
             // 
-            lblEntidad.AutoSize = true;
-            lblEntidad.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblEntidad.Location = new Point(43, 179);
-            lblEntidad.Name = "lblEntidad";
-            lblEntidad.Size = new Size(56, 19);
-            lblEntidad.TabIndex = 9;
-            lblEntidad.Text = "Entidad";
-            // 
-            // lblCredencial
-            // 
-            lblCredencial.AutoSize = true;
-            lblCredencial.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCredencial.Location = new Point(43, 112);
-            lblCredencial.Name = "lblCredencial";
-            lblCredencial.Size = new Size(75, 19);
-            lblCredencial.TabIndex = 8;
-            lblCredencial.Text = "Credencial";
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblNombre.Location = new Point(43, 45);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(60, 19);
-            lblNombre.TabIndex = 7;
-            lblNombre.Text = "Nombre";
-            // 
-            // txtDni
-            // 
-            txtDni.Cursor = Cursors.IBeam;
-            txtDni.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtDni.Location = new Point(43, 268);
-            txtDni.Name = "txtDni";
-            txtDni.Size = new Size(275, 32);
-            txtDni.TabIndex = 6;
-            txtDni.KeyPress += txtDni_KeyPress;
-            // 
-            // txtPlan
-            // 
-            txtPlan.Cursor = Cursors.IBeam;
-            txtPlan.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtPlan.Location = new Point(379, 201);
-            txtPlan.Name = "txtPlan";
-            txtPlan.Size = new Size(275, 32);
-            txtPlan.TabIndex = 5;
-            txtPlan.KeyPress += txtPlan_KeyPress;
-            // 
-            // txtInterno
-            // 
-            txtInterno.Cursor = Cursors.IBeam;
-            txtInterno.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtInterno.Location = new Point(379, 134);
-            txtInterno.Name = "txtInterno";
-            txtInterno.Size = new Size(275, 32);
-            txtInterno.TabIndex = 4;
-            txtInterno.KeyPress += txtInterno_KeyPress;
-            // 
-            // txtApellido
-            // 
-            txtApellido.Cursor = Cursors.IBeam;
-            txtApellido.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtApellido.Location = new Point(379, 67);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(275, 32);
-            txtApellido.TabIndex = 3;
-            txtApellido.KeyPress += txtApellido_KeyPress;
-            // 
-            // txtEntidad
-            // 
-            txtEntidad.Cursor = Cursors.IBeam;
-            txtEntidad.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtEntidad.Location = new Point(43, 201);
-            txtEntidad.Name = "txtEntidad";
-            txtEntidad.Size = new Size(275, 32);
-            txtEntidad.TabIndex = 2;
-            txtEntidad.KeyPress += txtEntidad_KeyPress;
-            // 
-            // txtCredencial
-            // 
-            txtCredencial.Cursor = Cursors.IBeam;
-            txtCredencial.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtCredencial.Location = new Point(43, 134);
-            txtCredencial.Name = "txtCredencial";
-            txtCredencial.Size = new Size(275, 32);
-            txtCredencial.TabIndex = 1;
-            txtCredencial.KeyPress += txtCredencial_KeyPress;
-            // 
-            // txtNombre
-            // 
-            txtNombre.Cursor = Cursors.IBeam;
-            txtNombre.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            txtNombre.Location = new Point(43, 67);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(275, 32);
-            txtNombre.TabIndex = 0;
-            txtNombre.KeyPress += txtNombre_KeyPress;
-            // 
-            // btnRegistrar
-            // 
-            btnRegistrar.BackColor = Color.FromArgb(21, 82, 113);
-            btnRegistrar.Cursor = Cursors.Hand;
-            btnRegistrar.FlatAppearance.BorderSize = 0;
-            btnRegistrar.FlatStyle = FlatStyle.Flat;
-            btnRegistrar.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegistrar.ForeColor = Color.White;
-            btnRegistrar.Location = new Point(586, 438);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(206, 36);
-            btnRegistrar.TabIndex = 7;
-            btnRegistrar.Text = "Registrar";
-            btnRegistrar.UseVisualStyleBackColor = false;
-            btnRegistrar.Click += btnRegistrar_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.BackColor = Color.Silver;
-            btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.FlatAppearance.BorderSize = 0;
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCancelar.ForeColor = Color.White;
-            btnCancelar.Location = new Point(90, 438);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(206, 36);
-            btnCancelar.TabIndex = 8;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = false;
-            btnCancelar.Click += btnCancelar_Click;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(21, 82, 113);
+            label2.Location = new Point(585, 186);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 25);
+            label2.TabIndex = 14;
+            label2.Text = "Empresa";
             // 
             // FormRegistrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 527);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnRegistrar);
-            Controls.Add(grpRegistro);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(lblConfiguracion);
+            Controls.Add(btnEmpresa);
+            Controls.Add(btnAfiliado);
+            Controls.Add(btnVolver);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormRegistrar";
             Text = "FormRegistrar";
-            grpRegistro.ResumeLayout(false);
-            grpRegistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnVolver).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAfiliado).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnEmpresa).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private GroupBox grpRegistro;
-        private TextBox txtPlan;
-        private TextBox txtInterno;
-        private TextBox txtApellido;
-        private TextBox txtEntidad;
-        private TextBox txtCredencial;
-        private TextBox txtNombre;
-        private Button btnRegistrar;
-        private TextBox txtDni;
-        private Button btnCancelar;
-        private Label lblPlan;
-        private Label lblInterno;
-        private Label lblApellido;
-        private Label lblDni;
-        private Label lblEntidad;
-        private Label lblCredencial;
-        private Label lblNombre;
+        private PictureBox btnVolver;
+        private PictureBox btnAfiliado;
+        private PictureBox btnEmpresa;
+        private Label lblConfiguracion;
+        private Label label1;
+        private Label label2;
     }
 }

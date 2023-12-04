@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -139,7 +139,7 @@
   <data name="btnImportarExcel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAA7hJREFUaEPtlm1MjWEYx/vmAyaM2ZoxH7TxjS95aUnnJE1mzJC30YnN2OgNyaxa
+        DgAACw4BQL7hQQAAA7hJREFUaEPtlm1MjWEYx/vmAyaM2ZoxH7TxjS95aUnnJE1mzJC30YnN2OgNyaxa
         NPLaB+TdZqb1wnwI44OF8YVhZkwJJVGolNPL6a/znOvUOfe5nuecbvdzZOu//dbpue/7un5XnfvshAxl
         KCZnREoEzGB4SkQ+tTA3XPO/ZWpOvPYzKEOIzVVQWV2B8NxF2mvThxCbq+Bd0+PgDSE2V4FzgKANITZX
         gXuAoAwhNleB5wCmDyE2V4E4gKlDiM1VwA3gxJQhxOYq4OTdKB9CbK4CTtwTzyFIQz5i82BDGvLhigYT
@@ -156,6 +156,22 @@
         6uev2xxGisbhGqtiZGoEZhbGuIY4ngDrmiRO1ptVSZ0LVtsiSc9/uMYqCU2fhblFVtd92L+Ul/YgNtG2
         idQCC9dUNeMz52BeAJc6oEsrhmtoBgFc6sAu7WBI1PL1E3rf67Ue8oFf2sESy2pbhCUxyT7gSzuY4ryw
         xpc2JOQPV4eeRBHop4oAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnVolver.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAmFJREFUaEPtl89O1UAUxq/RnUoCty0LggsfAKIsVFzg0g1wp013rliSSDslxJ34
+        CgZ4DhdswRDYsgT0BVSIK6ORPwvwnJuvps6d0PZyO21jf8mXmzuZM/1OZ+bMtNXQ0NBQU3z/tu2G7/Gv
+        XrTnVu6T+U3blVdoqg+OGz60RXjI5muXAL3155YbnsTma5WA5QUL9ObPk+brksAtW8h3qvFY6FNNbH/x
+        niXkB53xWOhaPUZ8OUZrfl9nelCyRPiLluUn0keeZcuLHuHxN2PUC57Q4N90DzWgI0dIASv5sUXkk/nf
+        moGNiqrd3rC/9AC2MsGb9Q0FX6qDlSVK4nvbC17AXyqVS4BlufKMzx94TKcqSygpngm+AcBiOiVvYr2E
+        3IW9bJgoo3nluEEH9rJR9EE2+mr5LpXMpzTba7prSo/oEonQXBi5SvAhRjP+RfeMfyTkJELyYeIyRzPx
+        OG0maEOvont+TFynqWyuJ8fXaBtd+6PoDxreEwmzvRLyM7r2T5GflFw4ekwnREXlJ7rekJnVOzzd+Dcw
+        Rl6+HtIZ/yshf6BrNXE6wTOt8ViDWEJFQkViQ2scokq1ha7Vw+osT9EbvtAZj0XL9i26V4uueVd+VQ2r
+        crylCYSUT7fieNF0d9mkvHkWVaADhF6PGojmwtqzqu2GsxjietRANJecQLiD8HTUYDSXlgBt3OPh+Wgc
+        4emoA6C5lASobJ7yPkFoNtRB0Gw8Af6UtDpyBmHZUQdCs+EEwp1cyyaJOhiajSTApbItojl07Q91UDQP
+        vJ1vlvR7RNrmE7ZSh1RDQ0PD/0Cr9QfifeNJF/U0IgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

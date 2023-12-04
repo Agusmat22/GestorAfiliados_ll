@@ -16,11 +16,20 @@ namespace Entidades
         
         }
 
-       
+        public Paciente(string nombre,string apellido,string dni,string entidad,string plan,string credencial,string interno) 
+            : base(nombre,apellido,dni)
+        {
+            this.Entidad = entidad;
+            this.Plan = plan;
+            this.Credencial = credencial;
+            this.Interno = interno;
+        }
+
+
 
 
         public string Entidad { get; set; }
-        public string TipoPlan { get; set; }
+        public string Plan { get; set; }
         public string Credencial { get; set; }
         public string Interno { get; set; }
 

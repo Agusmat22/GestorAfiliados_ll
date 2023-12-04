@@ -31,9 +31,9 @@ namespace Consola
                     Paciente paciente = new Paciente();
                     paciente.Nombre = "mESSI";
                     paciente.Apellido = "jORGELIUZ";
-                    paciente.TipoPlan = "00";
+                    paciente.Plan = "00";
                     paciente.Entidad = "PIRULIN";
-                    paciente.NumeroAfiliado = "45456454654";
+                    paciente.Credencial = "45456454654";
                     paciente.Dni = "12123132";
                     paciente.Interno = "25";
 

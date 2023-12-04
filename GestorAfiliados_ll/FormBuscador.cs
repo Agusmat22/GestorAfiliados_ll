@@ -90,7 +90,7 @@ namespace GestorAfiliados_ll
             {
                 int rowIndex = this.dgvAfiliados.Rows.Add();
                 this.dgvAfiliados.Rows[rowIndex].Cells["Entidad"].Value = af.Entidad;
-                this.dgvAfiliados.Rows[rowIndex].Cells["TipoPlan"].Value = af.TipoPlan;
+                this.dgvAfiliados.Rows[rowIndex].Cells["TipoPlan"].Value = af.Plan;
                 this.dgvAfiliados.Rows[rowIndex].Cells["NombreCompleto"].Value = af.ToString();
                 this.dgvAfiliados.Rows[rowIndex].Cells["NumeroAfiliado"].Value = af.Credencial;
                 this.dgvAfiliados.Rows[rowIndex].Cells["Interno"].Value = af.Interno;
@@ -103,15 +103,22 @@ namespace GestorAfiliados_ll
         private void btnImportarExcel_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
+            
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
                 //SEGUIR EL CODIGO MANIANA
+
             }
             else
             {
                 MessageBox.Show("Importacion cancelada", "Cancelado");
             }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

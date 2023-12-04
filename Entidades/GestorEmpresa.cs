@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades.Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,20 @@ namespace Entidades
     public class GestorEmpresa
     {
         private List<Paciente> afiliados;
+        private List<Empresa> empresas;
 
         public GestorEmpresa()
         {
             this.afiliados = new List<Paciente>();
+            this.empresas = new List<Empresa>();
         }
 
         public GestorEmpresa(List<Paciente> afiliados)
         {
             this.afiliados = afiliados;
         }
+
+        public List<Empresa> Empresas { get => this.empresas; set => this.empresas = value; }
 
         public List<Paciente> Afiliados { get => afiliados; set => afiliados = value; }
 
@@ -114,6 +119,13 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="paciente"></param>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="PropiedadNullException"></exception>
+        /// <returns></returns>
         public bool AgregarAfiliado(Paciente paciente)
         {
             if (!GestorEmpresa.BuscarAfiliado(paciente,this))
@@ -133,6 +145,10 @@ namespace Entidades
 
                     return true;
                 }
+                catch(PropiedadNullException)
+                {
+                    throw;
+                }
                 catch(Exception)
                 {
                     throw;
@@ -141,6 +157,45 @@ namespace Entidades
             }
 
             return false;
+        }
+
+        //TERMINAR ESTE METODO
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="paciente"></param>
+        /// <exception cref="Exception"></exception>
+        /// <exception cref="PropiedadNullException"></exception>
+        /// <returns></returns>
+        public bool AgregarEmpresa(Empresa empresa)
+        {            
+            try
+            {
+                //agrego el paciente a la list
+                this.Empresas.Add(empresa);
+
+                GestorArchivos gestorArchivos = new GestorArchivos();
+                gestorArchivos.NombreArchivo = "empresas.json";
+                //guardo la lista en el gestor de archivo
+                gestorArchivos.Empresas = this.Empresas;
+                //serializo la lista
+                gestorArchivos.Serializar();
+                //lo guardo en un .json
+                gestorArchivos.Guardar();
+
+                return true;
+            }
+            catch (PropiedadNullException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            
+
         }
     }
 }

@@ -46,9 +46,11 @@
             Interno = new DataGridViewTextBoxColumn();
             Dni = new DataGridViewTextBoxColumn();
             btnImportarExcel = new PictureBox();
+            btnVolver = new PictureBox();
             grpBuscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAfiliados).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnImportarExcel).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnVolver).BeginInit();
             SuspendLayout();
             // 
             // grpBuscador
@@ -86,6 +88,7 @@
             // rdbDni
             // 
             rdbDni.AutoSize = true;
+            rdbDni.Cursor = Cursors.Hand;
             rdbDni.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             rdbDni.Location = new Point(226, 42);
             rdbDni.Name = "rdbDni";
@@ -98,6 +101,7 @@
             // rdbNombre
             // 
             rdbNombre.AutoSize = true;
+            rdbNombre.Cursor = Cursors.Hand;
             rdbNombre.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             rdbNombre.Location = new Point(28, 42);
             rdbNombre.Name = "rdbNombre";
@@ -119,6 +123,7 @@
             // rdbCredencial
             // 
             rdbCredencial.AutoSize = true;
+            rdbCredencial.Cursor = Cursors.Hand;
             rdbCredencial.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             rdbCredencial.Location = new Point(122, 42);
             rdbCredencial.Name = "rdbCredencial";
@@ -224,12 +229,25 @@
             btnImportarExcel.TabStop = false;
             btnImportarExcel.Click += btnImportarExcel_Click;
             // 
+            // btnVolver
+            // 
+            btnVolver.Cursor = Cursors.Hand;
+            btnVolver.Image = (Image)resources.GetObject("btnVolver.Image");
+            btnVolver.Location = new Point(12, 12);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(42, 40);
+            btnVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            btnVolver.TabIndex = 9;
+            btnVolver.TabStop = false;
+            btnVolver.Click += btnVolver_Click;
+            // 
             // FormBuscador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(895, 527);
+            Controls.Add(btnVolver);
             Controls.Add(btnImportarExcel);
             Controls.Add(dgvAfiliados);
             Controls.Add(grpBuscador);
@@ -241,6 +259,7 @@
             grpBuscador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvAfiliados).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnImportarExcel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnVolver).EndInit();
             ResumeLayout(false);
         }
 
@@ -260,5 +279,6 @@
         private DataGridViewTextBoxColumn Interno;
         private DataGridViewTextBoxColumn Dni;
         private PictureBox btnImportarExcel;
+        private PictureBox btnVolver;
     }
 }

@@ -41,19 +41,22 @@
             btnBuscar = new Button();
             imageList1 = new ImageList(components);
             panelFormulario = new Panel();
+            pictureBox2 = new PictureBox();
             panelBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panelBarraSuperior
             // 
             panelBarraSuperior.BackColor = Color.FromArgb(22, 91, 125);
+            panelBarraSuperior.Controls.Add(pictureBox2);
             panelBarraSuperior.Controls.Add(btnMinimizar);
             panelBarraSuperior.Controls.Add(btnCerrar);
-            panelBarraSuperior.Cursor = Cursors.Default;
+            panelBarraSuperior.Cursor = Cursors.Arrow;
             panelBarraSuperior.Dock = DockStyle.Top;
             panelBarraSuperior.Location = new Point(0, 0);
             panelBarraSuperior.Name = "panelBarraSuperior";
@@ -182,12 +185,22 @@
             // 
             // panelFormulario
             // 
-            panelFormulario.Cursor = Cursors.Default;
+            panelFormulario.Cursor = Cursors.Arrow;
             panelFormulario.Dock = DockStyle.Fill;
             panelFormulario.Location = new Point(209, 50);
             panelFormulario.Name = "panelFormulario";
             panelFormulario.Size = new Size(895, 527);
             panelFormulario.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(12, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(21, 30);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
             // 
             // FormMenu
             // 
@@ -211,6 +224,7 @@
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -227,5 +241,6 @@
         private Panel panelFormulario;
         private Label label1;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }

@@ -3,20 +3,56 @@ using System.Runtime.InteropServices;
 
 namespace GestorAfiliados_ll
 {
+    /// <summary>
+    /// Delegado
+    /// </summary>
+    /// <param name="formularios"></param>
+    public delegate void MostrarFormulario(Form formularios);
+
     public partial class FormMenu : Form
     {
         private Button boton;
         private GestorEmpresa gestorEmpresa;
+        private MostrarFormulario mostrarFormulario;
 
         public FormMenu()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Muestra un formulario dentro del panel y borra el anterior
+        /// </summary>
+        /// <param name="formulario"></param>
         private void MostrarFormulario(Form formulario)
         {
             //limpia el panel antes de agregar un form
             this.LimpiarPanel();
+
+            // configuro el formulario que se va a mostrar
+            formulario.TopLevel = false;
+
+            //agrego el form al panel
+            this.panelFormulario.Controls.Add(formulario);
+
+            //le quito el borde al form de maximizar,cerrar y minimizar
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            //indico que el form se expandira en todo el ancho y largo del panel
+            formulario.Dock = DockStyle.Fill;
+            //aca muestro el formulario
+            formulario.Show();
+
+            formulario.BringToFront();
+        }
+
+        /// <summary>
+        /// Muestra un formulario encima del que esta abierto.
+        /// </summary>
+        /// <param name="formulario"></param>
+        private void MostrarSubFormulario(Form formulario)
+        {
+            //limpia el panel antes de agregar un form
+            //this.LimpiarPanel();
 
             // configuro el formulario que se va a mostrar
             formulario.TopLevel = false;
@@ -109,12 +145,14 @@ namespace GestorAfiliados_ll
         {
             this.CambiarColorBotonPresionado(this.btnRegistrar);
 
-            this.MostrarFormulario(new FormRegistrar(this.gestorEmpresa));
+            this.MostrarFormulario(new FormRegistrar(this.gestorEmpresa, this.mostrarFormulario));
 
         }
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             this.CambiarColorBotonPresionado(this.btnConfiguracion);
+            FormConfiguracion formConfiguracion = new FormConfiguracion(this.mostrarFormulario);
+            this.MostrarFormulario(formConfiguracion);
         }
 
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -129,6 +167,8 @@ namespace GestorAfiliados_ll
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
+            this.mostrarFormulario += this.MostrarSubFormulario;
+
             //Instacio el gestor de archivos para leer la lista de afiliados
             GestorArchivos gestorArchivos = new GestorArchivos();
 
@@ -142,12 +182,12 @@ namespace GestorAfiliados_ll
                 this.gestorEmpresa.Afiliados = gestorArchivos.Pacientes;
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            
+
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {}
+    "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {
+    "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
         "projectName": "GestorAfiliados_ll",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
-        "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +83,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj"
+              "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\usuario\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -117,7 +117,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

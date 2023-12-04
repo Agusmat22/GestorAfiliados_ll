@@ -9,7 +9,7 @@ namespace Entidades.Interfaces
     public interface IPrepaga
     {
         public string Entidad { get; set; }
-        public string TipoPlan { get; set; }
+        public string Plan { get; set; }
         public string Credencial { get; set; }
         public string Interno { get; set; }
     }

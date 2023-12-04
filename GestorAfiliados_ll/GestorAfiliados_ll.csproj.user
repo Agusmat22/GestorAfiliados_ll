@@ -4,10 +4,22 @@
     <Compile Update="FormBuscador.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormCargaDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormRegistrarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormRegistrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -29,24 +29,25 @@ namespace Entidades
     {
         private string datosSerializados;
         private List<Paciente> pacientes;
+        private List<Empresa> empresas;
         public List<string> pacientesNoCargados;
-        public static string nombreArchivo;
+        private string nombreArchivo;
 
-        static GestorArchivos()
-        {
-            GestorArchivos.nombreArchivo = "registros.json";
-        }
-        
-
+       
         public GestorArchivos() 
         { 
             this.pacientes = new List<Paciente>();
             this.pacientesNoCargados = new List<string>();
+            this.nombreArchivo = "registros.json";
         }
 
 
         public List<Paciente> Pacientes { get => pacientes; set => pacientes = value; }
+
+
         public string DatosSerializados { get => datosSerializados; }
+        public string NombreArchivo { get => nombreArchivo; set => nombreArchivo = value; }
+        public List<Empresa> Empresas { get => empresas; set => empresas = value; }
 
         /// <summary>
         /// Lee un archivo json
@@ -58,9 +59,9 @@ namespace Entidades
             try
             {              
 
-                if (File.Exists(GestorArchivos.nombreArchivo))
+                if (File.Exists(this.NombreArchivo))
                 {
-                    using (StreamReader streamReader = new StreamReader(GestorArchivos.nombreArchivo))
+                    using (StreamReader streamReader = new StreamReader(this.NombreArchivo))
                     {
                         string archivoLeido = streamReader.ReadToEnd();
                         this.Pacientes = JsonSerializer.Deserialize<List<Paciente>>(archivoLeido);
@@ -81,8 +82,8 @@ namespace Entidades
 
         /// <summary>
         /// Lee un archivo CSV
-        /// <exception cref="Exception"></exception>
         /// </summary>
+        /// <exception cref="Exception"></exception>
         /// <param name="posiciones">En cada posicion contiene la posicion de las columnas requeridas</param>
         /// <returns></returns>
         public bool Leer(string rutaCSV,int[] posiciones)
@@ -123,7 +124,7 @@ namespace Entidades
                             
                                 paciente.Nombre = columnas[posiciones[(int)EColumnasCsv.nombre]].Trim();
                                 paciente.Apellido = columnas[posiciones[(int)EColumnasCsv.apellido]].Trim();
-                                paciente.TipoPlan = columnas[posiciones[(int)EColumnasCsv.tipoPlan]].Trim();
+                                paciente.Plan = columnas[posiciones[(int)EColumnasCsv.tipoPlan]].Trim();
                                 paciente.Entidad = columnas[posiciones[(int)EColumnasCsv.entidad]].Trim();
                                 paciente.Credencial = columnas[posiciones[(int)EColumnasCsv.numeroAfiliado]].Trim();
                                 paciente.Dni = columnas[posiciones[(int)EColumnasCsv.dni]].Trim();
@@ -156,8 +157,8 @@ namespace Entidades
 
         /// <summary>
         /// Serializa los registros
-        /// <exception cref="Exception"></exception>
         /// </summary>
+        ///<exception cref="Exception">Exception</exception>
         /// <returns></returns>
         public bool Serializar()
         {
@@ -181,12 +182,16 @@ namespace Entidades
             return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="PropiedadNullException">Lanza una excepcion si la propiedad es null</exception>
         public void Guardar()
         {
             try
             {
 
-                using (StreamWriter streamWriter = new StreamWriter(GestorArchivos.nombreArchivo,false))
+                using (StreamWriter streamWriter = new StreamWriter(this.NombreArchivo,false))
                 {
                     if (this.DatosSerializados is not null)
                     {
@@ -208,6 +213,40 @@ namespace Entidades
             }
 
             
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tipoGuardado"></param>
+        ///<exception cref="PropiedadNullException">Lanza una excepcion si la propiedad es null</exception>
+
+        public void Guardar(bool tipoGuardado)
+        {
+            try
+            {
+
+                using (StreamWriter streamWriter = new StreamWriter(this.NombreArchivo, tipoGuardado))
+                {
+                    if (this.DatosSerializados is not null)
+                    {
+                        streamWriter.WriteLine(this.DatosSerializados);
+                    }
+                    else
+                    {
+                        throw new PropiedadNullException("Error al guardar, la propiedad DatosSerializados se encuentra vacia");
+                    }
+                }
+            }
+            catch (PropiedadNullException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
         }
     }
 }
