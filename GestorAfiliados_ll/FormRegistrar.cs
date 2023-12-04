@@ -29,7 +29,7 @@ namespace GestorAfiliados_ll
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -37,7 +37,7 @@ namespace GestorAfiliados_ll
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -45,7 +45,7 @@ namespace GestorAfiliados_ll
 
         private void txtCredencial_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -53,7 +53,7 @@ namespace GestorAfiliados_ll
 
         private void txtInterno_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -61,7 +61,7 @@ namespace GestorAfiliados_ll
 
         private void txtEntidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -69,7 +69,7 @@ namespace GestorAfiliados_ll
 
         private void txtPlan_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]*|[0-9]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[a-zA-Z]*|[0-9]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
@@ -77,7 +77,7 @@ namespace GestorAfiliados_ll
 
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$"))
+            if (!(Regex.IsMatch(e.KeyChar.ToString(), "^[0-9]+$") || char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }

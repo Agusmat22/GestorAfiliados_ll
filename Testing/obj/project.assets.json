@@ -6341,11 +6341,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Testing\\Testing.csproj",
+      "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Testing\\Testing.csproj",
       "projectName": "Testing",
-      "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Testing\\Testing.csproj",
+      "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Testing\\Testing.csproj",
       "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Testing\\obj\\",
+      "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Testing\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",

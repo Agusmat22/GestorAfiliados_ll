@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {}
+    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {
+    "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
+        "projectUniqueName": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
         "projectName": "GestorAfiliados_ll",
-        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
+        "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\GestorAfiliados_ll.csproj",
         "packagesPath": "C:\\Users\\Lisandro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\GestorAfiliados_ll\\obj\\",
+        "outputPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\GestorAfiliados_ll\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lisandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_II\\Entidades\\Entidades.csproj"
+              "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\Lisandro\\Desktop\\GestorAfiliados_ll\\Entidades\\Entidades.csproj"
               }
             }
           }
