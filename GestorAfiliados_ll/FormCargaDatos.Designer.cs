@@ -54,6 +54,7 @@
             btnCargar = new Button();
             lblEmpresa = new Label();
             cmbEmpresa = new ComboBox();
+            progressBar = new ProgressBar();
             ((System.ComponentModel.ISupportInitialize)btnVolver).BeginInit();
             grpTipoGuardado.SuspendLayout();
             grpPosiciones.SuspendLayout();
@@ -341,12 +342,21 @@
             cmbEmpresa.Name = "cmbEmpresa";
             cmbEmpresa.Size = new Size(244, 28);
             cmbEmpresa.TabIndex = 17;
+            cmbEmpresa.SelectedIndexChanged += cmbEmpresa_SelectedIndexChanged;
+            // 
+            // progressBar
+            // 
+            progressBar.Location = new Point(793, 501);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(100, 23);
+            progressBar.TabIndex = 18;
             // 
             // FormCargaDatos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 527);
+            Controls.Add(progressBar);
             Controls.Add(cmbEmpresa);
             Controls.Add(lblEmpresa);
             Controls.Add(btnCargar);
@@ -396,5 +406,6 @@
         private Button btnCargar;
         private Label lblEmpresa;
         private ComboBox cmbEmpresa;
+        private ProgressBar progressBar;
     }
 }

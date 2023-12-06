@@ -41,19 +41,16 @@
             btnBuscar = new Button();
             imageList1 = new ImageList(components);
             panelFormulario = new Panel();
-            pictureBox2 = new PictureBox();
             panelBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panelBarraSuperior
             // 
             panelBarraSuperior.BackColor = Color.FromArgb(22, 91, 125);
-            panelBarraSuperior.Controls.Add(pictureBox2);
             panelBarraSuperior.Controls.Add(btnMinimizar);
             panelBarraSuperior.Controls.Add(btnCerrar);
             panelBarraSuperior.Cursor = Cursors.Arrow;
@@ -96,7 +93,7 @@
             panelMenu.Controls.Add(btnConfiguracion);
             panelMenu.Controls.Add(btnRegistrar);
             panelMenu.Controls.Add(btnBuscar);
-            panelMenu.Cursor = Cursors.Default;
+            panelMenu.Cursor = Cursors.Arrow;
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 50);
             panelMenu.Name = "panelMenu";
@@ -192,16 +189,6 @@
             panelFormulario.Size = new Size(895, 527);
             panelFormulario.TabIndex = 2;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 9);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(21, 30);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -224,7 +211,6 @@
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -241,6 +227,5 @@
         private Panel panelFormulario;
         private Label label1;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
     }
 }

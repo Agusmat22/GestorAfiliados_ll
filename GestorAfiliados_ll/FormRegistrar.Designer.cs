@@ -56,9 +56,9 @@
             // 
             btnAfiliado.Cursor = Cursors.Hand;
             btnAfiliado.Image = (Image)resources.GetObject("btnAfiliado.Image");
-            btnAfiliado.Location = new Point(205, 225);
+            btnAfiliado.Location = new Point(209, 225);
             btnAfiliado.Name = "btnAfiliado";
-            btnAfiliado.Size = new Size(136, 120);
+            btnAfiliado.Size = new Size(125, 105);
             btnAfiliado.SizeMode = PictureBoxSizeMode.Zoom;
             btnAfiliado.TabIndex = 10;
             btnAfiliado.TabStop = false;
@@ -68,19 +68,20 @@
             // 
             btnEmpresa.Cursor = Cursors.Hand;
             btnEmpresa.Image = (Image)resources.GetObject("btnEmpresa.Image");
-            btnEmpresa.Location = new Point(559, 225);
+            btnEmpresa.Location = new Point(569, 225);
             btnEmpresa.Name = "btnEmpresa";
-            btnEmpresa.Size = new Size(136, 123);
+            btnEmpresa.Size = new Size(125, 105);
             btnEmpresa.SizeMode = PictureBoxSizeMode.Zoom;
             btnEmpresa.TabIndex = 11;
             btnEmpresa.TabStop = false;
+            btnEmpresa.Click += btnEmpresa_Click;
             // 
             // lblConfiguracion
             // 
             lblConfiguracion.AutoSize = true;
             lblConfiguracion.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblConfiguracion.ForeColor = Color.FromArgb(13, 51, 70);
-            lblConfiguracion.Location = new Point(383, 60);
+            lblConfiguracion.Location = new Point(386, 40);
             lblConfiguracion.Name = "lblConfiguracion";
             lblConfiguracion.Size = new Size(126, 37);
             lblConfiguracion.TabIndex = 12;

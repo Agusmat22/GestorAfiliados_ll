@@ -34,6 +34,9 @@
             btnCargarArchivo = new PictureBox();
             btnDerechosAutor = new PictureBox();
             btnManual = new PictureBox();
+            lblCargar = new Label();
+            lblManual = new Label();
+            lblCopyright = new Label();
             ((System.ComponentModel.ISupportInitialize)btnVolver).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCargarArchivo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnDerechosAutor).BeginInit();
@@ -85,6 +88,7 @@
             btnDerechosAutor.SizeMode = PictureBoxSizeMode.Zoom;
             btnDerechosAutor.TabIndex = 13;
             btnDerechosAutor.TabStop = false;
+            btnDerechosAutor.Click += btnDerechosAutor_Click;
             // 
             // btnManual
             // 
@@ -97,11 +101,47 @@
             btnManual.TabIndex = 14;
             btnManual.TabStop = false;
             // 
+            // lblCargar
+            // 
+            lblCargar.AutoSize = true;
+            lblCargar.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCargar.ForeColor = Color.FromArgb(21, 82, 113);
+            lblCargar.Location = new Point(169, 189);
+            lblCargar.Name = "lblCargar";
+            lblCargar.Size = new Size(69, 25);
+            lblCargar.TabIndex = 15;
+            lblCargar.Text = "Cargar";
+            // 
+            // lblManual
+            // 
+            lblManual.AutoSize = true;
+            lblManual.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblManual.ForeColor = Color.FromArgb(21, 82, 113);
+            lblManual.Location = new Point(414, 189);
+            lblManual.Name = "lblManual";
+            lblManual.Size = new Size(77, 25);
+            lblManual.TabIndex = 16;
+            lblManual.Text = "Manual";
+            // 
+            // lblCopyright
+            // 
+            lblCopyright.AutoSize = true;
+            lblCopyright.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCopyright.ForeColor = Color.FromArgb(21, 82, 113);
+            lblCopyright.Location = new Point(653, 189);
+            lblCopyright.Name = "lblCopyright";
+            lblCopyright.Size = new Size(97, 25);
+            lblCopyright.TabIndex = 17;
+            lblCopyright.Text = "Copyright";
+            // 
             // FormConfiguracion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(895, 527);
+            Controls.Add(lblCopyright);
+            Controls.Add(lblManual);
+            Controls.Add(lblCargar);
             Controls.Add(btnManual);
             Controls.Add(btnDerechosAutor);
             Controls.Add(btnCargarArchivo);
@@ -125,5 +165,8 @@
         private PictureBox btnCargarArchivo;
         private PictureBox btnDerechosAutor;
         private PictureBox btnManual;
+        private Label lblCargar;
+        private Label lblManual;
+        private Label lblCopyright;
     }
 }

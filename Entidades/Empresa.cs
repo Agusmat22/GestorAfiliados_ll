@@ -18,5 +18,11 @@ namespace Entidades
         }
 
         public int[] Posiciones { get => posiciones; set => posiciones = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

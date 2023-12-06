@@ -46,5 +46,12 @@ namespace GestorAfiliados_ll
             this.Hide();
             this.mostrarFormulario(formRegistrarUsuario);
         }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            FormRegistrarEmpresa formRegistrarEmpresa = new FormRegistrarEmpresa(this.gestorEmpresa, this);
+            this.Hide();
+            this.mostrarFormulario(formRegistrarEmpresa);
+        }
     }
 }

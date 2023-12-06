@@ -45,6 +45,13 @@ namespace Entidades
                     {
                         encontrados.Add(item);
                     }
+
+                    //indico que hasta 10 personas con coincidencia de nombre permito
+                    if (encontrados.Count > 10)
+                    {
+                        break;
+                    }
+
                 }
             }
 
@@ -139,7 +146,7 @@ namespace Entidades
                     //guardo la lista en el gestor de archivo
                     gestorArchivos.Pacientes = this.Afiliados;
                     //serializo la lista
-                    gestorArchivos.Serializar();
+                    gestorArchivos.SerializarPacientes();
                     //lo guardo en un .json
                     gestorArchivos.Guardar();
 
@@ -175,11 +182,11 @@ namespace Entidades
                 this.Empresas.Add(empresa);
 
                 GestorArchivos gestorArchivos = new GestorArchivos();
-                gestorArchivos.NombreArchivo = "empresas.json";
+                gestorArchivos.NombreArchivo = GestorArchivos.nombreArchivoEmpresas;
                 //guardo la lista en el gestor de archivo
                 gestorArchivos.Empresas = this.Empresas;
                 //serializo la lista
-                gestorArchivos.Serializar();
+                gestorArchivos.SerializarEmpresas();
                 //lo guardo en un .json
                 gestorArchivos.Guardar();
 
@@ -194,8 +201,32 @@ namespace Entidades
                 throw;
             }
 
-            
+        }
 
+        /// <summary>
+        /// Carga los afiliados y empresas registrados en nuestra aplicacion.
+        /// </summary>
+        public void Cargar()
+        {
+            try
+            {
+                //Instacio el gestor de archivos para leer la lista de afiliados
+                GestorArchivos gestorArchivos = new GestorArchivos();
+
+                gestorArchivos.Leer("paciente");
+                this.Afiliados = gestorArchivos.Pacientes;
+
+
+                gestorArchivos.NombreArchivo = GestorArchivos.nombreArchivoEmpresas;
+                gestorArchivos.Leer("empresa");
+                this.Empresas = gestorArchivos.Empresas;
+
+            }
+            catch(Exception) 
+            {
+                throw;
+            }
+            
         }
     }
 }

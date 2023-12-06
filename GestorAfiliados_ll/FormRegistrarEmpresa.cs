@@ -16,7 +16,7 @@ namespace GestorAfiliados_ll
     {
         private Form formularioRegistro;
         private GestorEmpresa gestorEmpresa;
-        public FormRegistrarEmpresa(Form formuarioRegistro,GestorEmpresa gestorEmpresa)
+        public FormRegistrarEmpresa(GestorEmpresa gestorEmpresa, Form formuarioRegistro)
         {
             InitializeComponent();
             this.formularioRegistro = formuarioRegistro;
@@ -77,6 +77,10 @@ namespace GestorAfiliados_ll
 
                     }
                 }
+                else if(item is Label)
+                {
+                    continue;
+                }
                 else
                 {
 
@@ -90,8 +94,10 @@ namespace GestorAfiliados_ll
             {
                 try
                 {
+                    int[] posiciones = new int[] { nombre,apellido,dni,entidad,plan,credencial,interno};
+
                     //ÀPLICAR LA LOGICA PARA GUARDARLO
-                    if (this.gestorEmpresa.AgregarAfiliado(new Empresa(nombre, apellido, dni, entidad, plan, credencial, interno)))
+                    if (this.gestorEmpresa.AgregarEmpresa(new Empresa(nombreEmpresa, posiciones)))
                     {
                         MessageBox.Show("Registro exitoso");
                     }

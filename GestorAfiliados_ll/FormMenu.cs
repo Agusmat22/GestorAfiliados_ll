@@ -151,7 +151,7 @@ namespace GestorAfiliados_ll
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             this.CambiarColorBotonPresionado(this.btnConfiguracion);
-            FormConfiguracion formConfiguracion = new FormConfiguracion(this.mostrarFormulario);
+            FormConfiguracion formConfiguracion = new FormConfiguracion(this.gestorEmpresa, this.mostrarFormulario);
             this.MostrarFormulario(formConfiguracion);
         }
 
@@ -169,17 +169,14 @@ namespace GestorAfiliados_ll
         {
             this.mostrarFormulario += this.MostrarSubFormulario;
 
-            //Instacio el gestor de archivos para leer la lista de afiliados
-            GestorArchivos gestorArchivos = new GestorArchivos();
-
             //instancio el gestor de empresa quien se encarga de manipular toda la aplicacion
             this.gestorEmpresa = new GestorEmpresa();
 
 
             try
             {
-                gestorArchivos.Leer();
-                this.gestorEmpresa.Afiliados = gestorArchivos.Pacientes;
+                //cargo los afiliados y empresas registrados en sistema
+                this.gestorEmpresa.Cargar();
 
             }
             catch (Exception ex)

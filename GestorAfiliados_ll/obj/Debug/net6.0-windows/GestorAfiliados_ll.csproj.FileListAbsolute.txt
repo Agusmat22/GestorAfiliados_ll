@@ -73,3 +73,5 @@ C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-
 C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-windows\GestorAfiliados_ll.FormConfiguracion.resources
 C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-windows\GestorAfiliados_ll.FormRegistrarEmpresa.resources
 C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-windows\GestorAfiliados_ll.FormRegistrarUsuario.resources
+C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-windows\GestorAfiliados_ll.FormAutor.resources
+C:\Users\usuario\Desktop\GestorAfiliados_ll\GestorAfiliados_ll\obj\Debug\net6.0-windows\GestorAfiliados_ll.FormManual.resources

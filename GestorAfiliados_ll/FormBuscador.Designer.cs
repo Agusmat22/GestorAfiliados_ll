@@ -139,7 +139,7 @@
             dgvAfiliados.AllowUserToDeleteRows = false;
             dgvAfiliados.AllowUserToResizeColumns = false;
             dgvAfiliados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(102, 146, 187);
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(137, 163, 187);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 77, 116);

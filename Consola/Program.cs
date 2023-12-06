@@ -13,7 +13,7 @@ namespace Consola
             int[] pos = { 5, 4, 7, 1, 8, 2, 3 };
             try
             {
-                if(gestor.Leer(rutaCsv,pos))
+                if(gestor.LeerAfiliados(rutaCsv,pos))
                 {
                     /*
                     Console.WriteLine("En principio, se pudo leer correctamente");
@@ -38,7 +38,7 @@ namespace Consola
                     paciente.Interno = "25";
 
                     gestor.Pacientes.Add(paciente);
-                    gestor.Serializar();
+                    gestor.SerializarPacientes();
                     gestor.Guardar();
                     Console.WriteLine("fin");
 

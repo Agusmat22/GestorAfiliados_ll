@@ -25,10 +25,12 @@ namespace GestorAfiliados_ll
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string textoIngresado = this.txtBusqueda.Text;
 
 
-            if (Regex.IsMatch(textoIngresado, @"^([0-9]+|[a-zA-Z]+)$"))
+            string textoIngresado = this.txtBusqueda.Text.Trim();
+
+
+            if (Regex.IsMatch(textoIngresado, @"^([0-9]+|[a-zA-Z\s]+)$"))
             {
                 foreach (Control item in this.grpBuscador.Controls)
                 {
@@ -52,6 +54,13 @@ namespace GestorAfiliados_ll
                     }
                 }
             }
+            else
+            {
+                //limpio el dataGrid
+                this.dgvAfiliados.Rows.Clear();
+            }
+
+            this.txtBusqueda.Text = "";
 
 
         }
@@ -103,7 +112,7 @@ namespace GestorAfiliados_ll
         private void btnImportarExcel_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
-            
+
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {

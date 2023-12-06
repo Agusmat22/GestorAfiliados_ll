@@ -33,6 +33,17 @@ namespace Entidades
         public List<string> pacientesNoCargados;
         private string nombreArchivo;
 
+        //EVENTO PARA USAR EL PROGRESSBAR
+        //FALTA CREARLO
+
+        public static string nombreArchivoEmpresas;
+        public static string nombreArchivoAfiliados;
+
+        static GestorArchivos()
+        {
+            GestorArchivos.nombreArchivoEmpresas = "empresas.json";
+            GestorArchivos.nombreArchivoAfiliados = "afiliados.json";
+        }
        
         public GestorArchivos() 
         { 
@@ -49,12 +60,19 @@ namespace Entidades
         public string NombreArchivo { get => nombreArchivo; set => nombreArchivo = value; }
         public List<Empresa> Empresas { get => empresas; set => empresas = value; }
 
+        /*
+        protected virtual void OnProgresoActualizado(int progreso)
+        {
+            OnProgresoDeCarga.Invoke(progreso);
+        }*/
+
         /// <summary>
-        /// Lee un archivo json
+        /// Lee un archivo json y lo guarda en una propiedad de la clase, segun el tipo elegido
         /// </summary>
+        /// <param name="tipo">Indicara el tipo de archivo que se leera, 'paciente' o 'empresa'</param>
         /// <exception cref="Exception"></exception>
         /// <returns></returns>
-        public void Leer()
+        public bool Leer(string tipo)
         {
             try
             {              
@@ -64,12 +82,23 @@ namespace Entidades
                     using (StreamReader streamReader = new StreamReader(this.NombreArchivo))
                     {
                         string archivoLeido = streamReader.ReadToEnd();
-                        this.Pacientes = JsonSerializer.Deserialize<List<Paciente>>(archivoLeido);
+
+                        if (tipo == "paciente")
+                        {
+                            this.Pacientes = JsonSerializer.Deserialize<List<Paciente>>(archivoLeido);
+                        }
+                        else if (tipo == "empresa")
+                        {
+                            this.Empresas = JsonSerializer.Deserialize<List<Empresa>>(archivoLeido);
+                        }
+                        
                     }
+
+                    return true;
                 }
                 else
                 {
-                    throw new Exception("Error, los pacientes no se encuentran cargados.\nDebe dirigirse a configuracion y seleccionar el archivo CSV");
+                    return false;
                 }
 
             }
@@ -78,7 +107,11 @@ namespace Entidades
                 throw;
             }
 
+            
+
         }
+
+
 
         /// <summary>
         /// Lee un archivo CSV
@@ -86,7 +119,7 @@ namespace Entidades
         /// <exception cref="Exception"></exception>
         /// <param name="posiciones">En cada posicion contiene la posicion de las columnas requeridas</param>
         /// <returns></returns>
-        public bool Leer(string rutaCSV,int[] posiciones)
+        public bool LeerAfiliados(string rutaCSV,int[] posiciones)
         {
             try
             {
@@ -132,7 +165,6 @@ namespace Entidades
 
                                 //agrego el paciente a la lista de pacientes
                                 this.Pacientes.Add(paciente);
-                                
 
                             }
                             else
@@ -160,7 +192,7 @@ namespace Entidades
         /// </summary>
         ///<exception cref="Exception">Exception</exception>
         /// <returns></returns>
-        public bool Serializar()
+        public bool SerializarPacientes()
         {
             try
             {
@@ -171,6 +203,28 @@ namespace Entidades
                     options.WriteIndented = true;
 
                     this.datosSerializados = JsonSerializer.Serialize<List<Paciente>>(this.Pacientes,options);
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return false;
+        }
+
+        public bool SerializarEmpresas()
+        {
+            try
+            {
+                if (this.Empresas is not null)
+                {
+
+                    JsonSerializerOptions options = new JsonSerializerOptions();
+                    options.WriteIndented = true;
+
+                    this.datosSerializados = JsonSerializer.Serialize<List<Empresa>>(this.Empresas, options);
                     return true;
                 }
             }
@@ -248,5 +302,7 @@ namespace Entidades
 
 
         }
+
+        
     }
 }
